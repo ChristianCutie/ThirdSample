@@ -1,0 +1,58 @@
+@model IEnumerable<ThirdSample.Models.Type>
+@if (Model.Count() > 0)
+{
+    <div class="container-fluid">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title">Type</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> Basic tables </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Basic Table</h4>
+                            <div class="btn-group-sm" role="group">
+                                <a asp-action="CreateView" class="btn btn-success float-right">Add New</a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Item</th>
+                                            <th>Edit/Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model)
+                                        {
+                                            <tr>
+                                                <td>@x.Item.Name</td>
+                                                <td>@x.Name</td>
+                                                <td>
+                                                    <div class="btn-group" role="group">
+                                                        <a class="btn text-success"><i
+                                                        class="mdi mdi-information-outline"></i></a>
+                                                    </div>
+                                                    <div class="btn-group" role="group">
+                                                        <a class="btn text-danger"><i class="mdi mdi-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
