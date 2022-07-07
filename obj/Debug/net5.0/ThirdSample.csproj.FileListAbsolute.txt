@@ -74,3 +74,4 @@ C:\Users\63948\ThirdSample\obj\Debug\net5.0\Razor\Views\Type\CreateView.cshtml.g
 C:\Users\63948\ThirdSample\obj\Debug\net5.0\Razor\Views\Instrument\InstrumentView.cshtml.g.cs
 C:\Users\63948\ThirdSample\obj\Debug\net5.0\Razor\Views\Instrument\InsCreateView.cshtml.g.cs
 C:\Users\63948\ThirdSample\obj\Debug\net5.0\Razor\Views\Instrument\EditView.cshtml.g.cs
+C:\Users\63948\ThirdSample\obj\Debug\net5.0\Razor\Views\Login\LoginView.cshtml.g.cs

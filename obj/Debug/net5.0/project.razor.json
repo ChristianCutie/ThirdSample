@@ -15629,6 +15629,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\63948\\ThirdSample\\Views\\Login\\LoginView.cshtml",
+      "TargetPath": "Views\\Login\\LoginView.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\63948\\ThirdSample\\Views\\Item\\ItemView.cshtml",
       "TargetPath": "Views\\Item\\ItemView.cshtml",
       "FileKind": "mvc"

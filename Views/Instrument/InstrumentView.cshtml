@@ -42,16 +42,20 @@
                                                 <td>@x.price</td>
                                                 <td>
                                                     <div class="btn-group" role="group"><a asp-controller="Instrument"
-                                                    asp-action="EditView" asp-route-Id="@x.Id" class="btn text-success"><i
+                                                    asp-action="EditView" asp-route-Id="@x.Id"
+                                                    class="btn text-success"><i
                                                         class="mdi mdi-information-outline"></i></a>
                                                     </div>
                                                     <form method="post">
                                                         <div class="btn-group" role="group">
-                                                        <button onclick="if(!confirm('Are you sure want to delete?')){return false}" asp-action="DeleteView" asp-route-Id="@x.Id" class="btn text-danger"><i class="mdi mdi-pencil"></i></button>
-                                                        <a class="btn text-danger"></a>
-                                                    </div>
+                                                            <button
+                                                        onclick="if(!confirm('Are you sure want to delete?')){return false}"
+                                                        asp-action="DeleteView" asp-route-Id="@x.Id"
+                                                        class="btn text-danger"><i class="mdi mdi-pencil"></i></button>
+                                                            <a class="btn text-danger"></a>
+                                                        </div>
                                                     </form>
-                                                    
+
                                                 </td>
                                             </tr>
                                         }

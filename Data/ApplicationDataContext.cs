@@ -18,5 +18,7 @@ namespace ThirdSample.Data
         public DbSet<Item> items {get; set;}
         public DbSet<Type> types {get; set;}
         public DbSet<Instrument> instruments {get; set;}
+        public DbSet<login> logins {get; set;}
+        public DbSet<register> registers {get; set;}
     }
 }

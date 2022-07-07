@@ -9,8 +9,8 @@ using ThirdSample.Data;
 namespace ThirdSample.Migrations
 {
     [DbContext(typeof(ApplicationDataContext))]
-    [Migration("20220623044021_UpdateInstruments")]
-    partial class UpdateInstruments
+    [Migration("20220702015116_UpdateToDb")]
+    partial class UpdateToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -85,6 +85,61 @@ namespace ThirdSample.Migrations
                     b.HasIndex("itemid");
 
                     b.ToTable("types");
+                });
+
+            modelBuilder.Entity("ThirdSample.Models.login", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("logins");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("login");
+                });
+
+            modelBuilder.Entity("ThirdSample.Models.register", b =>
+                {
+                    b.HasBaseType("ThirdSample.Models.login");
+
+                    b.Property<int>("Age")
+                        .HasMaxLength(3)
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstNane")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastNane")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("userID")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("register");
                 });
 
             modelBuilder.Entity("ThirdSample.Models.Instrument", b =>
